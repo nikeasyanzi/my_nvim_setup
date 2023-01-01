@@ -32,7 +32,7 @@ return require("packer").startup({
     -- color schemes
     use 'folke/tokyonight.nvim'
 
-    -- treesitter
+    -- treesitter better syntax highlighting.
     use({
       "nvim-treesitter/nvim-treesitter",
       run = ":TSUpdate",
@@ -40,7 +40,7 @@ return require("packer").startup({
     use("nvim-treesitter/nvim-treesitter-textobjects")
 
     -- icons
-    use("kyazdani42/nvim-web-devicons")
+    use("kyazdani42/nvim-web-devicons") -- Lua fork of vim-web-devicons for neovim
 
     -- automatic bracket pairs
     use({
@@ -92,7 +92,7 @@ return require("packer").startup({
       branch = "master",
     })
 
-    -- telescope
+    -- telescope amazing extensible & configurable fuzzy finder, you can also use FZF if you want.
     use({
       "nvim-telescope/telescope.nvim",
       tag = "0.1.0",
@@ -103,7 +103,7 @@ return require("packer").startup({
     use("nvim-telescope/telescope-ui-select.nvim")
 
     -- telescope file browser
-    use("nvim-telescope/telescope-file-browser.nvim")
+    use("nvim-telescope/telescope-file-browser.nvim") -- File Browser extension for telescope.nvim
 
     -- quick motions
     use({
@@ -115,29 +115,29 @@ return require("packer").startup({
     use("nvim-lualine/lualine.nvim")
 
     -- snippets
-    use("L3MON4D3/LuaSnip")
+    use("L3MON4D3/LuaSnip") -- Snippet Engine for Neovim written in Lua
     use("rafamadriz/friendly-snippets")
 
     -- lsp
-    use("neovim/nvim-lspconfig")
+    use("neovim/nvim-lspconfig") -- A collection of configurations for Neovim's built-in LSP
 
     -- lsp installer
-    use("williamboman/mason.nvim")
-    use("williamboman/mason-lspconfig.nvim")
+    use("williamboman/mason.nvim") -- Portable package manager for Neovim that runs everywhere Neovim runs. Easily install and manage LSP servers, DAP servers, linters, and formatters
+    use("williamboman/mason-lspconfig.nvim") -- Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
 
     -- lsp progress
     use("j-hui/fidget.nvim")
 
     -- formatting, code actions and diagnostics
-    use("jose-elias-alvarez/null-ls.nvim")
-
+    use("jose-elias-alvarez/null-ls.nvim") -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua.
+    
     -- diagnostics list
     use("folke/trouble.nvim")
 
-    -- autocompletion
-    use("hrsh7th/nvim-cmp")
-    use("hrsh7th/cmp-buffer")
-    use("hrsh7th/cmp-nvim-lsp")
+    -- autocompletion 
+    use("hrsh7th/cmp-nvim-lsp") -- nvim-cmp source for neovim's built-in LSP
+    use("hrsh7th/nvim-cmp") -- A completion engine plugin for neovim written in Lua
+    use("hrsh7th/cmp-buffer") -- nvim-cmp source for buffer words
     use("hrsh7th/cmp-nvim-lua")
     use("hrsh7th/cmp-path")
     use("saadparwaiz1/cmp_luasnip")
